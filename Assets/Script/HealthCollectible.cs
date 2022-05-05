@@ -15,7 +15,7 @@ public class HealthCollectible : MonoBehaviour
 
     }
 
-
+    public AudioClip collectedClip;
 
 
 
@@ -29,6 +29,7 @@ public class HealthCollectible : MonoBehaviour
             {
                 controller.ChangeHealth(1);
                 Destroy(gameObject);
+                controller.PlaySound(collectedClip);
             }
             
         }
